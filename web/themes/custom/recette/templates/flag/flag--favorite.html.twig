@@ -1,0 +1,26 @@
+{% apply spaceless %}
+  {{ attach_library('flag/flag.link') }}
+
+  {% if action == 'unflag' %}
+    {% set action_class = 'action-unflag' %}
+  {% else %}
+    {% set action_class = 'action-flag' %}
+  {% endif %}
+
+  {%
+    set classes = [
+    'flag',
+    'flag-' ~ flag.id()|clean_class,
+    'js-flag-' ~ flag.id()|clean_class ~ '-' ~ flaggable.id(),
+    action_class
+  ]
+  %}
+
+  {% set attributes = attributes.setAttribute('rel', 'nofollow') %}
+
+  <div class="{{ classes|join(' ') }}">
+    <h6{{ attributes }}>
+      <span class="heart-icon"></span> {{ title }}
+    </h6>
+  </div>
+{% endapply %}

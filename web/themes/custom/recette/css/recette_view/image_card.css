@@ -1,0 +1,20 @@
+/* Make images inside the grid rounded with a fixed size */
+.views-view-grid img {
+  width: 400px;  /* Fixed width */
+  height: 400px; /* Fixed height */
+  object-fit: cover; /* Ensures images fit nicely without distortion */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect to make it look more interactive */
+.views-view-grid img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Ensure grid items are properly spaced */
+.views-view-grid .grid-item {
+  padding: 15px;
+}

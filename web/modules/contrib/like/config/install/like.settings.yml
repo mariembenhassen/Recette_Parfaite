@@ -1,0 +1,3 @@
+enabled_entity_types: {}
+like_cookie_expiry_time: 31536000
+cache_type: 'entity'

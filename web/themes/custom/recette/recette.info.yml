@@ -5,8 +5,11 @@ core_version_requirement: '^10.1 || ^11.0'
 'base theme': bootstrap5
 libraries:
   - recette/global-styling
+  - recette/footer-styles
 ckeditor_stylesheets:
   - css/style.css
+  - css/grid_bootstrap_style.css
+  - css/info.css
 ckeditor5-stylesheets:
   - css/ck5style.css
 regions:

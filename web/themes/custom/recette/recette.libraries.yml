@@ -2,3 +2,7 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      css/footer.css: {}
+      css/flag.css: {}
+      css/recette_view/custom_title.css: {}
+      css/recette_view/image_card.css: {}

@@ -1,0 +1,8 @@
+entity.user.bookmarks:
+  path: "/user/{user}/bookmarks"
+  defaults:
+    _controller: '\Drupal\bookmarks\Controller\BookmarksController::build'
+    _title_callback: '\Drupal\bookmarks\Controller\BookmarksController::title'
+  requirements:
+    _custom_access: '\Drupal\bookmarks\Controller\BookmarksController::access'
+    user: \d+

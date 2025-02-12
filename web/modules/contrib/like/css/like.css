@@ -1,0 +1,39 @@
+.like--wrapper {
+  text-decoration: none;
+}
+
+.like--wrapper form {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.like--wrapper i {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.like--wrapper .fa-heart {
+  color: grey;
+}
+
+.like--wrapper .fa-heart:hover {
+  color: red;
+}
+
+.like--wrapper label {
+  cursor: pointer;
+  margin: 0;
+}
+
+.like--wrapper input[type="checkbox"] {
+  cursor: pointer;
+  display: none;
+}
+
+.like--wrapper input[type="checkbox"]:checked ~ .fa-heart {
+  color: red;
+}

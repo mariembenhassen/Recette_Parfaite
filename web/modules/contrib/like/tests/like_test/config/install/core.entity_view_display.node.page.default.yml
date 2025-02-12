@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  likes:
+    type: like_default
+    label: hidden
+    settings:
+      default_state: Like
+      liked_state: 'You liked this.'
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

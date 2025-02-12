@@ -1,0 +1,6 @@
+entity.user.bookmarks:
+  title: "Bookmarks"
+  description: "View the list of your favorites links."
+  route_name: entity.user.bookmarks
+  weight: 10
+  base_route: entity.user.canonical

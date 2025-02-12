@@ -1,0 +1,6 @@
+flag.icon:
+  version: VERSION
+  css:
+    base:
+      css/flag.icon.css: {  }
+  dependencies: {  }

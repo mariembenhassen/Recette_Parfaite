@@ -1,0 +1,11 @@
+name: Cache Control Override test
+type: module
+description: 'Provides functionality for testing Cache Control Override.'
+package: Testing
+dependencies:
+  - cache_control_override:cache_control_override
+
+# Information added by Drupal.org packaging script on 2024-08-21
+version: '2.0.1'
+project: 'cache_control_override'
+datestamp: 1724222749

@@ -1,0 +1,11 @@
+name: Cache Control Override
+type: module
+description: Override page Cache-Control header based on bubbled cacheability metadata.
+core_version_requirement: '>=10.2'
+php: 8.1
+package: Performance and scalability
+
+# Information added by Drupal.org packaging script on 2024-08-21
+version: '2.0.1'
+project: 'cache_control_override'
+datestamp: 1724222749

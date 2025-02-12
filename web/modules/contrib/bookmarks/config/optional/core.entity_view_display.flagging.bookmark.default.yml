@@ -1,0 +1,11 @@
+id: flagging.bookmark.default
+targetEntityType: flagging
+bundle: bookmark
+mode: default
+content: {  }
+hidden:
+  title: true
+dependencies:
+  config:
+    - field.field.flagging.bookmark.title
+    - flag.flag.bookmark

@@ -1,0 +1,23 @@
+like.handler:
+  path: /like/{entity_type}/{entity}
+  defaults:
+    _controller: '\Drupal\like\Controller\LikeController::handler'
+  methods: [GET]
+  requirements:
+    _permission: 'access content'
+    _entity_access: 'entity.view'
+    entity: \d+
+  options:
+    parameters:
+      entity:
+        type: entity:{entity_type}
+
+like.settings:
+  path: /admin/config/user-interface/like
+  defaults:
+    _title: 'Like button settings'
+    _form: '\Drupal\like\Form\SettingsForm'
+  requirements:
+    _permission: 'administer like configuration'
+  options:
+    _admin_route: TRUE

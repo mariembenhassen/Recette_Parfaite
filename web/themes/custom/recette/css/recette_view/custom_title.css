@@ -1,0 +1,10 @@
+.custom-title a {
+  color: #323131; /* Orange */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.custom-title a:hover {
+  color: #f4bfbf; /* Red */
+  text-decoration: underline;
+}

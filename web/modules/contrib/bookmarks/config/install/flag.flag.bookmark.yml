@@ -1,0 +1,28 @@
+uuid: 3bd05000-48a4-4f8d-acd9-12cd2e75914b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - path_alias
+id: bookmark
+label: Bookmark
+bundles: {  }
+entity_type: path_alias
+global: false
+flag_short: 'Ajouter aux favoris'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Retirer des favoris'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+weight: 0
+flag_type: 'entity:path_alias'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: true
+  show_contextual_link: false
+  extra_permissions: {  }
+linkTypeConfig: {  }

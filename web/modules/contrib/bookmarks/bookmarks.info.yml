@@ -1,0 +1,17 @@
+name: Bookmarks
+type: module
+description: "Save links to any pages in Drupal within a list of bookmarks, per user."
+package: Flag
+core_version_requirement: ^8 || ^9 || ^10
+# version: 1.0
+dependencies:
+  - drupal:path_alias
+  - drupal:user
+  - drupal:views
+  - flag:flag
+  - views_entity_form_field:views_entity_form_field
+
+# Information added by Drupal.org packaging script on 2022-07-31
+version: '1.0.2'
+project: 'bookmarks'
+datestamp: 1659240545

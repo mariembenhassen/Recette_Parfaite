@@ -1,0 +1,14 @@
+name: "Like!"
+description: "Adds a like button."
+type: module
+core_version_requirement: ^10
+dependencies:
+  - entity:entity
+  - cache_control_override:cache_control_override
+  - js_cookie:js_cookie
+  - drupal:views
+
+# Information added by Drupal.org packaging script on 2024-07-08
+version: '2.0.2'
+project: 'like'
+datestamp: 1720447901

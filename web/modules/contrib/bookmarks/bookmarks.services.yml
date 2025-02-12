@@ -1,0 +1,4 @@
+services:
+  bookmarks.manager:
+    class: '\Drupal\bookmarks\BookmarksManager'
+    arguments: ["@router", "@request_stack", "@title_resolver"]

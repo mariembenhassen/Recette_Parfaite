@@ -1,0 +1,20 @@
+{
+  "name": "drupal/bookmarks",
+  "description": "Save links to any pages in Drupal within a list of bookmarks, per user.",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Matthieu SCARSET",
+      "email": "m@matthieuscarset.com",
+      "homepage": "https://matthieuscarset.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/flag": "^4.0@beta",
+    "drupal/views_entity_form_field": "^1.0@beta"
+  },
+  "require-dev": {},
+  "suggest": {}
+}

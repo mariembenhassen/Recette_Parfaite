@@ -1,0 +1,16 @@
+id: flagging.bookmark.title
+field_name: title
+entity_type: flagging
+bundle: bookmark
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
+dependencies:
+  config:
+    - field.storage.flagging.title
+    - flag.flag.bookmark

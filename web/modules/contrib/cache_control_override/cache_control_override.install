@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Module install file.
+ */
+
+use Drupal\Core\Cache\Cache;
+
+/**
+ * Add 'cache_control_override.settings'.
+ */
+function cache_control_override_update_8101() {
+  \Drupal::configFactory()
+    ->getEditable('cache_control_override.settings')
+    // These values effectively disable max age coercion.
+    ->set('max_age.minimum', 0)
+    ->set('max_age.maximum', Cache::PERMANENT)
+    ->save(TRUE);
+}

@@ -1,0 +1,39 @@
+{
+    "name": "drupal/like",
+    "description": "A simple like button module.",
+    "type": "drupal-module",
+    "homepage": "http://drupal.org/project/like",
+    "authors": [
+        {
+            "name": "Pedro Cambra",
+            "homepage": "https://drupal.org/u/pcambra",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Manuel Egío",
+            "homepage": "https://www.drupal.org/u/facine",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "http://drupal.org/project/issues/like",
+        "source": "http://cgit.drupalcode.org/like"
+    },
+    "extra": {
+        "drush": {
+            "services": {
+                "drush.services.yml": "^9 || ^10 || ^11"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/entity": "^1",
+        "drupal/cache_control_override": "^2",
+        "drupal/js_cookie": "^1.0"
+    },
+    "suggest": {
+        "drupal/antibot": "^2",
+        "drupal/fontawesome": "^2"
+    }
+}

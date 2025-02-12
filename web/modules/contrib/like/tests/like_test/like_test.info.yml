@@ -1,0 +1,13 @@
+name: "Like test"
+description: "Support test module for the like one."
+type: module
+package: Testing
+# version: VERSION
+dependencies:
+  - drupal:node
+  - like:like
+
+# Information added by Drupal.org packaging script on 2024-07-08
+version: '2.0.2'
+project: 'like'
+datestamp: 1720447901

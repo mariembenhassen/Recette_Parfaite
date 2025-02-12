@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Like module file.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\like\LikeItemList;
+
+/**
+ * Implements hook_theme().
+ */
+function like_theme($existing, $type, $theme, $path) {
+  return [
+    'like_form' => [
+      'render element' => 'form',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function like_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $config = \Drupal::configFactory()->get('like.settings');
+
+  if (in_array($entity_type->id(), $config->get('enabled_entity_types') ?? [])) {
+    $fields = [];
+
+    $fields['likes'] = BaseFieldDefinition::create('integer')
+      ->setLabel('Likes')
+      ->setComputed(TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayOptions('view', [
+        'region' => 'hidden',
+      ])
+      ->setClass(LikeItemList::class);
+
+    return $fields;
+  }
+
+  return [];
+}

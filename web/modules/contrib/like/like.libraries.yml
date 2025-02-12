@@ -1,0 +1,12 @@
+like:
+  version: 1.x
+  css:
+    theme:
+      css/like.css: { }
+  js:
+    js/like.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - js_cookie/js-cookie

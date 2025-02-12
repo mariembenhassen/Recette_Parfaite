@@ -1,0 +1,18 @@
+id: flagging.bookmark.default
+targetEntityType: flagging
+bundle: bookmark
+mode: default
+content:
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
+dependencies:
+  config:
+    - field.field.flagging.bookmark.title
+    - flag.flag.bookmark

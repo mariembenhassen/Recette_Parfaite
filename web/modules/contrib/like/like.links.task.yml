@@ -1,0 +1,5 @@
+entity.like.collection:
+  title: Likes
+  route_name: entity.like.collection
+  base_route: system.admin_content
+  weight: 10

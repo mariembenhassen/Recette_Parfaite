@@ -1,0 +1,7 @@
+cache_control_override_test.max_age:
+  path: '/cco/{max_age}'
+  defaults:
+    _controller: '\Drupal\cache_control_override_test\Controller\CacheControl'
+    max_age: NULL
+  requirements:
+    _access: 'TRUE'

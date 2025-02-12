@@ -1,0 +1,5 @@
+parameters:
+  twig.config:
+    debug: true # Enable Twig debugging to see template suggestions
+    auto_reload: true # Automatically recompile templates when source changes
+    cache: false # Disable cache to ensure changes are immediately visible

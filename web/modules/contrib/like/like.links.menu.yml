@@ -1,0 +1,6 @@
+like.settings:
+  title: 'Like'
+  route_name: like.settings
+  description: 'Configure settings for the like button.'
+  parent: system.admin_config_ui
+  weight: 99

@@ -1,0 +1,13 @@
+cache_control_override.settings:
+  type: config_object
+  label: 'Cache control override settings'
+  mapping:
+    max_age:
+      type: mapping
+      mapping:
+        minimum:
+          type: integer
+          label: 'Minimum max age, if max age is greater than 0. Leave empty to disable.'
+        maximum:
+          type: integer
+          label: 'Maximum max age, if max age is greater than 0. Set to -1 to disable.'

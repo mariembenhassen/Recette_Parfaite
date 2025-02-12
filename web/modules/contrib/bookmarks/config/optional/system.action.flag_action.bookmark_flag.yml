@@ -1,0 +1,12 @@
+id: flag_action.bookmark_flag
+label: 'Add to favorites'
+type: path_alias
+plugin: 'flag_action:bookmark_flag'
+configuration:
+  flag_id: bookmark
+  flag_action: flag
+dependencies:
+  config:
+    - flag.flag.bookmark
+  module:
+    - flag

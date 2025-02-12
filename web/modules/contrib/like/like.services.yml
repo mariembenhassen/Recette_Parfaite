@@ -1,0 +1,9 @@
+services:
+  like.helper:
+    class: Drupal\like\LikeHelper
+    arguments: ['@current_user', '@entity_type.manager', '@request_stack', '@datetime.time', '@config.factory']
+
+  like.ajax_refresh_like_subscriber:
+    class: Drupal\like\EventSubscriber\AjaxRefreshLikeSubscriber
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,26 @@
+like.settings:
+  type: config_object
+  label: 'Like settings'
+  mapping:
+    enabled_entity_types:
+      type: sequence
+      label: 'Enabled entity types'
+      sequence:
+        type: string
+    like_cookie_expiry_time:
+      type: integer
+      label: 'Like Cookie Expiry Time'
+    cache_type:
+      type: string
+      label: 'Cache Type'
+
+field.formatter.settings.like_default:
+  type: mapping
+  label: 'Like default formatter settings'
+  mapping:
+    default_state:
+      type: label
+      label: 'Default state text'
+    liked_state:
+      type: label
+      label: 'Liked state text'

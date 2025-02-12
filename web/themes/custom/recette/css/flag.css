@@ -1,0 +1,15 @@
+/* Default heart icon (transparent) */
+.heart-icon::before {
+  content: "♥"; /* Unicode heart character */
+  font-size: 24px;
+  color: rgb(239, 238, 238);
+  text-shadow: 0 0 0 #6e6a6a; /* Black outline */
+  transition: color 0.3s ease-in-out;
+  margin-right: 5px;
+}
+
+/* When the recipe is liked (heart turns red) */
+.action-unflag .heart-icon::before {
+  color: #ef5b5b;
+  text-shadow: none;
+}
