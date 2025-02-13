@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.recette.field_image_recette
     - field.field.node.recette.field_ingredients
     - field.field.node.recette.field_preparation
+    - field.field.node.recette.field_title
     - node.type.recette
   module:
     - text
@@ -26,6 +27,11 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
+  flag_favorite:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -36,3 +42,6 @@ hidden:
   field_image_recette: true
   field_ingredients: true
   field_preparation: true
+  field_title: true
+  langcode: true
+  search_api_excerpt: true

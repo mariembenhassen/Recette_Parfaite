@@ -1,0 +1,45 @@
+uuid: 12ebe809-7d9e-43e0-80f5-e33ff89dd8bd
+langcode: en
+status: false
+dependencies:
+  module:
+    - taxonomy
+id: index
+name: index
+description: ''
+read_only: false
+field_settings:
+  name_1:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: string
+    dependencies:
+      module:
+        - taxonomy
+datasource_settings:
+  'entity:search_api_task': {  }
+  'entity:taxonomy_term':
+    bundles:
+      default: true
+      selected:
+        - les_categories_de_recettes
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: ''

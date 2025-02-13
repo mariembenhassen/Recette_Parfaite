@@ -1,0 +1,16 @@
+uuid: ff3ab59c-4656-40b4-8b1f-9cae499e7fa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recette
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.recette
+target_entity_type_id: node
+target_bundle: recette
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,38 @@
+uuid: 947c1276-ead6-4358-968a-5d0fb0cd6ce7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.leftcategories
+  module:
+    - menu_block
+    - system
+  theme:
+    - recette
+id: recette_lescategoriesderecettes
+theme: recette
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'menu_block:leftcategories'
+settings:
+  id: 'menu_block:leftcategories'
+  label: 'Catégories  '
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: active
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'leftcategories:'
+  render_parent: false
+  suggestion: leftcategories
+  hide_on_nonactive: false
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /recettes

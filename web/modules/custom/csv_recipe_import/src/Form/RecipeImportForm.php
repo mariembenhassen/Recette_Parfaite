@@ -7,6 +7,8 @@ use Drupal\node\Entity\Node;
 use Drupal\file\Entity\File;
 use GuzzleHttp\Exception\RequestException;
 use Drupal\Core\File\FileSystemInterface;
+use Drupal\taxonomy\Entity\Term;
+
 
 class RecipeImportForm extends FormBase {
 
@@ -72,7 +74,7 @@ $this->messenger()->addError($this->t('Could not open the uploaded CSV file.'));
 }
 }
 
-public function processRecipe($data) {
+/*public function processRecipe($data) {
 if (count($data) < 4) {
 \Drupal::logger('csv_recipe_import')->warning('Skipping a row due to insufficient data.');
 return;
@@ -97,7 +99,82 @@ $node->set('field_image_recette', ['target_id' => $file->id()]);
 
 $node->save();
 \Drupal::logger('csv_recipe_import')->notice('Successfully imported recipe: @title', ['@title' => $title]);
-}
+}*/
+  public function processRecipe($data) {
+    if (count($data) < 6) {
+      \Drupal::logger('csv_recipe_import')->warning('Skipping a row due to insufficient data.');
+      return;
+    }
+
+    // Map CSV data to variables
+    [$title, $description, $image_url, $category_name, $ingredients, $preparation] = $data;
+
+    // Fetch or create the taxonomy term based on category name (category_name)
+    $term = $this->getOrCreateCategoryTerm($category_name);
+
+    // Fetch and save the image
+    $file = $this->fetchAndSaveImage($image_url);
+
+    // Create the recipe node
+    $node = Node::create([
+      'type' => 'recette',
+      'title' => $title, // Using CSV "Title" for node title
+      'body' => ['value' => $description, 'format' => 'full_html'], // Description
+      'field_preparation' => ['value' => $preparation, 'format' => 'full_html'], // Preparation
+      'field_ingredients' => ['value' => $ingredients, 'format' => 'full_html'], // Ingredients
+    ]);
+
+    // Set category field if a term is found
+    if ($term) {
+      $node->set('field_categorie', ['target_id' => $term->id()]);
+    }
+
+    // Attach image if a file was found
+    if ($file) {
+      $node->set('field_image_recette', ['target_id' => $file->id()]);
+    }
+
+    // Save the node
+    $node->save();
+    \Drupal::logger('csv_recipe_import')->notice('Successfully imported recipe: @title', ['@title' => $title]);
+  }
+
+  public function getOrCreateCategoryTerm($category_name) {
+    // Load terms in the 'les_categories_de_recettes' vocabulary
+    $terms = \Drupal\taxonomy\Entity\Term::loadMultiple(
+      \Drupal::entityQuery('taxonomy_term')
+        ->condition('vid', 'les_categories_de_recettes') // Filter by vocabulary ID
+        ->accessCheck(FALSE) // Disable access check for this query
+        ->execute()
+    );
+
+    $existing_term = NULL;
+
+    // Search for the term by name
+    foreach ($terms as $term) {
+      if ($term->getName() == $category_name) {
+        $existing_term = $term;
+        break;
+      }
+    }
+
+    // If term doesn't exist, create it
+    if (!$existing_term) {
+      $existing_term = Term::create([
+        'vid' => 'les_categories_de_recettes', // Your vocabulary machine name
+        'name' => $category_name,  // Use the category name from the CSV
+      ]);
+      $existing_term->save();
+      \Drupal::logger('csv_recipe_import')->notice('Created new category term: @name', ['@name' => $category_name]);
+    }
+
+    return $existing_term;
+  }
+
+
+
+
+
   public function fetchAndSaveImage($image_url) {
     try {
       $http_client = \Drupal::service('http_client');
@@ -149,3 +226,8 @@ $node->save();
 
 }
 ?>
+
+<!--to test here is a csv exemple : Title,Description,Image URL,Catégorie,Ingrédients,Préparation
+"Crêpe","On prend autant de plaisir à les faire sauter qu’à les manger. Avec ou sans bolée de cidre, la crêpe se plie toujours en 4 pour nous régaler ! Si elle se savoure de façon incontournable à la chandeleur, elle s’invite aussi lors de toutes les occasions festives. Du goûter à l’anniversaire en passant par la fameuse « crêpes party », personne ne lui résiste. Pour une recette de pâte à crêpes facile garantie zéro grumeau, c’est par ici !","https://img.cuisineaz.com/660x495/2013/12/20/i27173-marbre-au-chocolat.webp","Desserts","Farine 200 g, Lait 0.5 l, Sucre vanillé 2 paquet(s), Levure en poudre 5 g, Beurre, Sel 1 pincée(s), Fruit(s) frais, Sucre","Étape 1: Mélangez la farine, la levure, le sel et le sucre. Étape 2: Creusez un puits. Étape 3: Ajoutez le lait progressivement, en fouettant. Étape 4: Ajoutez les œufs et fouettez jusqu'à obtenir une pâte homogène. Étape 5: Faites cuire dans une poêle huilée. Étape 6: Retournez les crêpes et laissez dorer. Étape 7: Faites glisser sur une assiette et passez à la suivante. Étape 8: Saupoudrez légèrement de sucre."
+
+-->

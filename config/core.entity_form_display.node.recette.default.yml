@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.recette.field_image_recette
     - field.field.node.recette.field_ingredients
     - field.field.node.recette.field_preparation
+    - field.field.node.recette.field_title
     - image.style.thumbnail
     - node.type.recette
   module:
@@ -73,6 +74,21 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
+  field_title:
+    type: text_textfield
+    weight: 130
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
@@ -107,6 +123,11 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

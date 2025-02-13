@@ -1,0 +1,11 @@
+uuid: eb467694-fa8c-4c44-b5a9-1b153567c6b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.les_categories_de_recettes
+id: taxonomy_term.les_categories_de_recettes
+target_entity_type_id: taxonomy_term
+target_bundle: les_categories_de_recettes
+default_langcode: site_default
+language_alterable: false

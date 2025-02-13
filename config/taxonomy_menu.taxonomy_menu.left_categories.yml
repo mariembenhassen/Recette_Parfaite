@@ -1,0 +1,16 @@
+uuid: f747a912-ba2f-4620-a812-49de4fe1ef03
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.leftcategories
+    - taxonomy.vocabulary.les_categories_de_recettes
+id: left_categories
+label: 'les catégories de recettes'
+vocabulary: les_categories_de_recettes
+menu: leftcategories
+expanded: true
+depth: 8
+menu_parent: 'leftcategories:'
+description_field_name: ''
+use_term_weight_order: true

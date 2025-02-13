@@ -8,10 +8,10 @@ dependencies:
     - field.field.node.recette.field_image_recette
     - field.field.node.recette.field_ingredients
     - field.field.node.recette.field_preparation
+    - field.field.node.recette.field_title
     - node.type.recette
   module:
     - image
-    - like
     - text
     - user
 id: node.recette.default
@@ -59,6 +59,13 @@ content:
     third_party_settings: {  }
     weight: 107
     region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
   likes:
     type: like_default
     label: inline
@@ -75,3 +82,5 @@ content:
     region: content
 hidden:
   flag_favorite: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,8 @@
+uuid: e8dc49c1-b529-4cd7-aa59-8e5d07a4f46d
+langcode: en
+status: true
+dependencies: {  }
+id: leftcategories
+label: 'les catégories de recettes'
+description: ''
+locked: false

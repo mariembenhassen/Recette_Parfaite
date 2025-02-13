@@ -1,0 +1,27 @@
+uuid: d5dd0476-e96c-498b-a2d4-26f24f625c1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.les_categories_de_recettes
+  module:
+    - text
+id: taxonomy_term.les_categories_de_recettes.default
+targetEntityType: taxonomy_term
+bundle: les_categories_de_recettes
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

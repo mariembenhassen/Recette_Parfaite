@@ -1,0 +1,29 @@
+uuid: 6a7e3bfe-350a-4ace-a0d2-97f0a3963d72
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - recette
+id: recette_languageswitcher
+theme: recette
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: '0'
+  provider: language
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en
+      fr: fr
+      es: es

@@ -1,0 +1,23 @@
+label: Marque-pages
+display:
+  default:
+    display_title: 'Par défaut'
+    display_options:
+      fields:
+        rendered_entity:
+          label: Lien
+        form_field_title:
+          label: Titre
+        link_flag:
+          label: Action
+      exposed_form:
+        options:
+          submit_button: Appliquer
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      arguments:
+        uid:
+          exception:
+            title: Tout

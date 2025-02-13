@@ -1,0 +1,23 @@
+label: Marcadores
+display:
+  default:
+    display_title: 'Por defecto'
+    display_options:
+      fields:
+        rendered_entity:
+          label: Enlace
+        form_field_title:
+          label: Título
+        link_flag:
+          label: Acción
+      exposed_form:
+        options:
+          submit_button: Aplicar
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      arguments:
+        uid:
+          exception:
+            title: Todo(s)
