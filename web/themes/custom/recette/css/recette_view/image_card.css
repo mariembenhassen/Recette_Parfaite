@@ -10,7 +10,7 @@
 
 /* Hover effect to make it look more interactive */
 .views-view-grid img:hover {
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: scale(1.00); /* Slight zoom effect */
   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 

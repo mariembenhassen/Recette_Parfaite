@@ -1,0 +1,22 @@
+uuid: 388a4aad-c11a-48e0-99e6-40635c9ea9ed
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - recette
+_core:
+  default_config_hash: qbU0PnOaAw0KTnvzX5SvNeqGqnUzVjGZ-x7f5MOFj98
+id: recette_help
+theme: recette
+region: content
+weight: -1
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

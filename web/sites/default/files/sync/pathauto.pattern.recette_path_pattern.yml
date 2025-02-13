@@ -1,0 +1,14 @@
+uuid: ba6c67d7-ec2a-46be-a874-61a560879899
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: recette_path_pattern
+label: 'Recette Path Pattern'
+type: 'canonical_entities:node'
+pattern: 'recipes/[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

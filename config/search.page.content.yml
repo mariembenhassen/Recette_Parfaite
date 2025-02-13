@@ -1,0 +1,13 @@
+uuid: 4303e05d-e005-4dc5-98d8-c60867b03ad6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content
+label: 'recette search'
+path: recette_search
+weight: 0
+plugin: node_search
+configuration:
+  rankings: {  }

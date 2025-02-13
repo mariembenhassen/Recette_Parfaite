@@ -1,0 +1,16 @@
+uuid: 28ffbb3d-1df5-4ac2-8f99-204b11e2c4ab
+langcode: en
+status: null
+dependencies:
+  config:
+    - field.field.flagging.bookmark.title
+    - flag.flag.bookmark
+_core:
+  default_config_hash: vwAuTTZw9zoyKI8Pj8B9-NTV8HOCV__-dX5hlSOIK8I
+id: flagging.bookmark.default
+targetEntityType: flagging
+bundle: bookmark
+mode: default
+content: {  }
+hidden:
+  title: true

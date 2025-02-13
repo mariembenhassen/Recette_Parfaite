@@ -1,0 +1,15 @@
+uuid: 6c6060a2-b0a5-409f-8689-332a01934c0e
+langcode: en
+status: true
+dependencies: {  }
+name: recipe_card_size
+label: 'Recipe Card Size'
+effects:
+  df3380e4-0311-48fe-80bd-8f3a57693f45:
+    uuid: df3380e4-0311-48fe-80bd-8f3a57693f45
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 600
+      anchor: center-center

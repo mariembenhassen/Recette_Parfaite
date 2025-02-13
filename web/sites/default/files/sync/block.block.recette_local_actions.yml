@@ -1,0 +1,20 @@
+uuid: 7582ede5-f1ee-422c-9bc7-65a0951597b6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - recette
+_core:
+  default_config_hash: HY2rJKpfUbtp2NdqQKGcO7XQk6WzjFzT0792vnftpdY
+id: recette_local_actions
+theme: recette
+region: content
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

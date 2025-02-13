@@ -1,0 +1,9 @@
+name: 'CSV Recipe Import'
+type: module
+description: 'A module to import recipes from a CSV file.'
+core_version_requirement: ^10
+package: 'Custom'
+menu_name: admin
+dependencies:
+  - drupal:node
+  - drupal:taxonomy

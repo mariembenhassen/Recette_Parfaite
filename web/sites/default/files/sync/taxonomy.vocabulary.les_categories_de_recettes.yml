@@ -1,0 +1,9 @@
+uuid: 5fd16fbb-e508-4a26-868c-49b0c97122be
+langcode: en
+status: true
+dependencies: {  }
+name: 'les catégories de recettes'
+vid: les_categories_de_recettes
+description: null
+weight: 0
+new_revision: false

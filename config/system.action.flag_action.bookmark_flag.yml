@@ -1,0 +1,15 @@
+uuid: 12ff9dc8-d7a5-412e-abb1-ce95f73c355a
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.bookmark
+  module:
+    - flag
+id: flag_action.bookmark_flag
+label: 'Ajouter aux favoris'
+type: path_alias
+plugin: 'flag_action:bookmark_flag'
+configuration:
+  flag_id: bookmark
+  flag_action: flag

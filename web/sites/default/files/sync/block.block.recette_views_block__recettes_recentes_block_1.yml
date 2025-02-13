@@ -1,0 +1,29 @@
+uuid: db518d48-17b4-4caa-9784-c126c4759d86
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recettes_recentes
+  module:
+    - system
+    - views
+  theme:
+    - recette
+id: recette_views_block__recettes_recentes_block_1
+theme: recette
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:recettes_recentes-block_1'
+settings:
+  id: 'views_block:recettes_recentes-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

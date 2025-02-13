@@ -1,0 +1,23 @@
+uuid: ea0a3c1e-b049-4770-b78f-3a1c2317178d
+langcode: en
+status: null
+dependencies:
+  config:
+    - field.field.flagging.bookmark.title
+    - flag.flag.bookmark
+_core:
+  default_config_hash: 0GPyfka5T8XTWO3-HyU57k_IyyuNbxFXz9XW8oAklMw
+id: flagging.bookmark.default
+targetEntityType: flagging
+bundle: bookmark
+mode: default
+content:
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

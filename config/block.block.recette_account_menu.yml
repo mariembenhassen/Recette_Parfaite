@@ -1,0 +1,27 @@
+uuid: 40c7d785-ba84-4cfc-9d1b-c73ffd9d2402
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - recette
+_core:
+  default_config_hash: WAO4DyP9vLsc2DA1J4CnlRKho1p-kPxGWw6s9pofiec
+id: recette_account_menu
+theme: recette
+region: nav_additional
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

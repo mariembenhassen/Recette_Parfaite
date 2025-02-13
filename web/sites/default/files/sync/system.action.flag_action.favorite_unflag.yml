@@ -1,0 +1,15 @@
+uuid: da375bca-f9d8-45b1-b7d4-f6f5da480602
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.favorite
+  module:
+    - flag
+id: flag_action.favorite_unflag
+label: 'Unlike this recipe'
+type: node
+plugin: 'flag_action:favorite_unflag'
+configuration:
+  flag_id: favorite
+  flag_action: unflag

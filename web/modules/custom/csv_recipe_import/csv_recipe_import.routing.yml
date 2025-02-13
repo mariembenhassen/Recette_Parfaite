@@ -1,0 +1,7 @@
+csv_recipe_import.import_form:
+  path: '/admin/recette-import'
+  defaults:
+    _form: '\Drupal\csv_recipe_import\Form\RecipeImportForm'
+    _title: 'Import Recipes'
+  requirements:
+    _permission: 'administer site configuration'

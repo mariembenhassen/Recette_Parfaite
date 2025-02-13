@@ -1,0 +1,27 @@
+uuid: 27fca872-5583-4e76-bf5e-766692da20dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - recette
+_core:
+  default_config_hash: JI1rzlhxUDUbopWPMWXkk-ZEhwuMyziSnzI9P7c8-3k
+id: recette_main_navigation
+theme: recette
+region: nav_main
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

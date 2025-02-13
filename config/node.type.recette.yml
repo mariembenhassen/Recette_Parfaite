@@ -1,0 +1,18 @@
+uuid: b08f19f3-0c81-4532-bc35-43f05bab6192
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Recette
+type: recette
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

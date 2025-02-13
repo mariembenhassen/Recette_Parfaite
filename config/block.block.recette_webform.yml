@@ -1,0 +1,62 @@
+uuid: 58880b1d-3eaa-44a2-8e6f-eecbdd438c7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.contact_us
+  module:
+    - node
+    - system
+    - user
+    - webform
+  theme:
+    - recette
+id: recette_webform
+theme: recette
+region: content
+weight: -5
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  label_display: '0'
+  provider: webform
+  webform_id: contact_us
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+  'entity_bundle:webform_submission':
+    id: 'entity_bundle:webform_submission'
+    negate: false
+    context_mapping:
+      webform_submission: '@webform.webform_submission_route_context:webform_submission'
+    bundles:
+      contact_us: contact_us
+  webform:
+    id: webform
+    negate: false
+    context_mapping:
+      webform: '@webform.webform_route_context:webform'
+    webforms:
+      contact_us: contact_us
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page

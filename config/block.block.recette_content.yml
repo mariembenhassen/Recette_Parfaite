@@ -1,0 +1,22 @@
+uuid: 359a4bc2-033b-4b78-ab68-707c4533cadc
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - recette
+_core:
+  default_config_hash: ldsUgTQwN0r1u8Tq5ndmpYZ6KikmlwFlzCl6SiqSJGw
+id: recette_content
+theme: recette
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

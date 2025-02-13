@@ -1,0 +1,22 @@
+uuid: 3e18891e-7863-478a-b922-8a60d952c312
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - recette
+_core:
+  default_config_hash: WLV120E_zgtP6Yd0t8xKCMni9ubMPrEsLIuP4yu1DJg
+id: recette_messages
+theme: recette
+region: content
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

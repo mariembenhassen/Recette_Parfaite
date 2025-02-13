@@ -1,0 +1,15 @@
+uuid: 46f03a17-f9b0-4c48-8923-1365bfea67e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.favorite
+  module:
+    - flag
+id: flag_action.favorite_flag
+label: 'Like this recipe'
+type: node
+plugin: 'flag_action:favorite_flag'
+configuration:
+  flag_id: favorite
+  flag_action: flag

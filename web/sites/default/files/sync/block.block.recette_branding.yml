@@ -1,0 +1,25 @@
+uuid: 43d7a27b-0516-4f11-9b9f-e57466e67dc4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - recette
+_core:
+  default_config_hash: R8AF5Vc52GUWlRojLMf2t_NIpJQh9YGQ4-uLAD9DI4w
+id: recette_branding
+theme: recette
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

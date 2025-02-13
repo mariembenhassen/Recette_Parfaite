@@ -1,0 +1,22 @@
+uuid: 319ca087-7fe8-4533-b945-7d46438a1d6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - recette
+_core:
+  default_config_hash: pUfMu6wxPXzyz7WnPAkXGPpPOVAbmEMLfnIghssBH1M
+id: recette_powered_by_drupal
+theme: recette
+region: footer
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,7 @@
+csv_recipe_import.import_admin:
+  title: 'Import Recipes'
+  description: 'Upload a CSV file to import recipes'
+  parent: system.admin_config_content
+  route_name: csv_recipe_import.import_form
+  menu_name: admin
+  weight: 10

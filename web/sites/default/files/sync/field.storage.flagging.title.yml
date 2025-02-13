@@ -1,0 +1,23 @@
+uuid: 4408e6f6-add5-441e-9639-fd1170d31741
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+_core:
+  default_config_hash: CJDQYTxd2Yu4ApwGdMbJxQZxzr_mPmuEq90T8JMC7Wc
+id: flagging.title
+field_name: title
+entity_type: flagging
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
