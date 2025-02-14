@@ -12857,5 +12857,21 @@ em.placeholder {
 code {
   overflow-y: auto;
 }
+.custom-footer {
+  background: #959393;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.custom-footer a {
+  color: #ed8585;
+  text-decoration: none;
+}
+
+.custom-footer a:hover {
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=style.css.map */

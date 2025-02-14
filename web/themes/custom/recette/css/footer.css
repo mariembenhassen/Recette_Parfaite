@@ -1,0 +1,25 @@
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: #b1b1b1 !important;
+}
+
+.region-footer {
+  background-color: #b1b1b1 !important;
+  padding: 20px 0 !important;
+  font-size: 14px !important;
+  color: #fffefe !important;
+  width: 100% !important; /* Ensures full width */
+  display: flex;
+  justify-content: center; /* Centers content */
+  align-items: center;
+}
+
+.region-footer a {
+  text-decoration: none !important;
+  font-weight: bold !important;
+  color: white !important;
+}
+
+.region-footer a:hover {
+  text-decoration: underline !important;
+}
