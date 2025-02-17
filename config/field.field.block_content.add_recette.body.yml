@@ -1,0 +1,24 @@
+uuid: 4acf2a69-7e07-4ddb-a9c3-151c12baa3e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.add_recette
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.add_recette.body
+field_name: body
+entity_type: block_content
+bundle: add_recette
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -8,11 +8,11 @@ definitions:
     expanded: false
     weight: 0
   user__page:
-    weight: 10
+    enabled: false
     menu_name: account
     parent: ''
     expanded: false
-    enabled: true
+    weight: 10
   'taxonomy_menu__menu_link:taxonomy_menu__menu_link__left_categories__3':
     expanded: true
     parent: ''
@@ -109,3 +109,15 @@ definitions:
     parent: ''
     expanded: false
     enabled: true
+  standard__front_page:
+    enabled: false
+    menu_name: main
+    parent: ''
+    expanded: false
+    weight: 0
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__left_categories__16':
+    enabled: false
+    menu_name: leftcategories
+    parent: ''
+    expanded: true
+    weight: 0

@@ -1,0 +1,24 @@
+uuid: f120c724-133c-4e98-81c5-8ca497d35104
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.add_recette
+    - field.field.block_content.add_recette.body
+  module:
+    - text
+id: block_content.add_recette.default
+targetEntityType: block_content
+bundle: add_recette
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

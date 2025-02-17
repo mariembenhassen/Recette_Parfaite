@@ -1,0 +1,8 @@
+uuid: f6fea478-4c6d-4b59-b7ff-66b20bc4c1ae
+langcode: en
+status: true
+dependencies: {  }
+id: add_recette
+label: 'add recette'
+revision: false
+description: null

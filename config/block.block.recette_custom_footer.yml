@@ -1,0 +1,25 @@
+uuid: c7b33c5e-2ae8-4f66-afb1-4603c346686e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3586f92b-a7b1-44f2-82be-4f33be05b6b0'
+  module:
+    - block_content
+  theme:
+    - recette
+id: recette_custom_footer
+theme: recette
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:3586f92b-a7b1-44f2-82be-4f33be05b6b0'
+settings:
+  id: 'block_content:3586f92b-a7b1-44f2-82be-4f33be05b6b0'
+  label: custom_footer
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
