@@ -218,6 +218,23 @@ class RecipeImportForm extends ConfigFormBase {
   }
 
   /**
+   * Checking titles.
+   *
+   * @param string $title
+   *   Searched  title.
+   *
+   * @return \Drupal\node\NodeInterface|null
+   *   Return a node if the file exist , if not its will return nothing.
+   */
+  public function checkExistingTitle($title) {
+    $node = $this->entityTypeManager->getStorage('node')->loadByProperties(['title' => $title, 'type' => 'recette']);
+    if (empty($node)) {
+      return FALSE;
+    }
+    return reset($node);
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
@@ -311,31 +328,67 @@ class RecipeImportForm extends ConfigFormBase {
     }
 
     [$title, $description, $image_url, $category_name, $ingredients, $preparation] = $data;
+    // File with title exist or not.
+    $existing_node = $this->checkExistingTitle($title);
 
-    $term = $this->getOrCreateCategoryTerm($category_name);
-    $file = self::fetchAndSaveImage($image_url);
+    if ($existing_node) {
+      $node = $existing_node;
+      // Check the fields.
+      if (!empty($description)) {
+        $node->set('body', ['value' => $description, 'format' => 'full_html']);
+      }
+      if (!empty($ingredients)) {
+        $node->set('field_ingredients', ['value' => $ingredients, 'format' => 'full_html']);
 
-    $node = Node::create([
-      'type' => 'recette',
-      'title' => $title,
-      'body' => ['value' => $description, 'format' => 'full_html'],
-      'field_preparation' => ['value' => $preparation, 'format' => 'full_html'],
-      'field_ingredients' => ['value' => $ingredients, 'format' => 'full_html'],
-    ]);
+      }
+      if (!empty($preparation)) {
+        $node->set('field_preparation', ['value' => $preparation, 'format' => 'full_html']);
+      }
+      // Category check if it already exists ,
+      // if not call getOrCreateCategoryTerm(name) function.
+      if (!empty($category_name)) {
 
-    if ($term) {
-      $node->set('field_categorie', ['target_id' => $term->id()]);
+        $term = $this->getOrCreateCategoryTerm($category_name);
+        $node->set('field_categorie', ['target_id' => $term->id()]);
+      }
+      // Update image url.
+      if (!empty($image_url)) {
+        $file = self::fetchAndSaveImage($image_url);
+        if ($file) {
+          $node->set('field_image_recette', ['target_id' => $file->id()]);
+        }
+      }
+      // Save changes.
+      $node->save();
+      $context['message'] = $this->t('Updated recipe: @title', ['@title' => $title]);
+
     }
+    else {
+      $term = $this->getOrCreateCategoryTerm($category_name);
+      $file = self::fetchAndSaveImage($image_url);
 
-    if ($file) {
-      $node->set('field_image_recette', ['target_id' => $file->id()]);
+      $node = Node::create([
+        'type' => 'recette',
+        'title' => $title,
+        'body' => ['value' => $description, 'format' => 'full_html'],
+        'field_preparation' => ['value' => $preparation, 'format' => 'full_html'],
+        'field_ingredients' => ['value' => $ingredients, 'format' => 'full_html'],
+      ]);
+
+      if ($term) {
+        $node->set('field_categorie', ['target_id' => $term->id()]);
+      }
+
+      if ($file) {
+        $node->set('field_image_recette', ['target_id' => $file->id()]);
+      }
+
+      $node->save();
+
+      $context['message'] = $this->t('Importing recipe: @title', ['@title' => $title]);
+      $context['results'][] = $title;
+      $context['total'] = count($context['results']);
     }
-
-    $node->save();
-
-    $context['message'] = $this->t('Importing recipe: @title', ['@title' => $title]);
-    $context['results'][] = $title;
-    $context['total'] = count($context['results']);
   }
 
   /**
