@@ -118,6 +118,12 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laminas/laminas-stdlib" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/maennchen/zipstream-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/solarium/solarium" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dealerdirect/phpcodesniffer-composer-installer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/drupal/coder" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpstan/phpdoc-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sirbrillig/phpcs-variable-analysis" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/slevomat/coding-standard" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/squizlabs/php_codesniffer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
