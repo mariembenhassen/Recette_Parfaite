@@ -1,13 +1,14 @@
+
 .bg-light {
   --bs-bg-opacity: 1;
-  background-color: #b1b1b1 !important;
+  background-color: rgb(50, 49, 49) !important;
 }
 
 .region-footer {
-  background-color: #b1b1b1 !important;
+  background-color: #323131 !important;
   padding: 20px 0 !important;
   font-size: 14px !important;
-  color: #fffefe !important;
+  color: rgb(255, 255, 255) !important;
   width: 100% !important; /* Ensures full width */
   display: flex;
   justify-content: center; /* Centers content */
