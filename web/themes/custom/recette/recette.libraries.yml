@@ -7,4 +7,4 @@ global-styling:
       css/recette_view/image_card.css: {}
       css/recette_view/form_category.css: {}
       css/footer.css: {}
-
+      css/navbar.css: {}

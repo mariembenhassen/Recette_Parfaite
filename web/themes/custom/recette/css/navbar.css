@@ -1,0 +1,10 @@
+.navbar {
+  background-color: #323131 !important;
+  margin-bottom: 5px;
+}
+
+.navbar .site-title,
+.navbar .nav-item a {
+  color: #fff !important;
+}
+
